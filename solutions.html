@@ -10,18 +10,35 @@
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	
-	<link rel="stylesheet" href="./css/index.css">
-	
 	<title>Vectacorp</title>
 	
 	<style>
+		.navbar {
+			position: absolute;
+			width: 98%;
+			margin: 1vw 1%;
+			z-index: 2;
+		}
+		
+		.carousel-caption h5, .carousel-caption p { text-shadow: 0px 0px 4px black; }
+
+		.carousel-indicators li {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			border: 2px solid white;
+			background-color: transparent;
+		}
+		
+		.carousel-indicators li.active { background-color: white }
+		
 		.row { margin: 0 !important }
 		.solutions-data { height: 300px; overflow-y: scroll }
 	</style>
 </head>
 <body>
 	
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">
 			<img src="./images/logo.png" height="40px" alt="">
 		</a>
@@ -31,11 +48,11 @@
 		
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						About Us
 					</a>
 					<div class="dropdown-menu" aria-labelledby="aboutDropdown">
@@ -45,8 +62,8 @@
 						<a class="dropdown-item" href="#">Careers</a>
 					</div>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-white" href="#" id="solutionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" id="solutionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Solutions
 					</a>
 					<div class="dropdown-menu" aria-labelledby="solutionDropdown"> 
@@ -56,10 +73,10 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Support</a>
+					<a class="nav-link" href="#">Support</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-white" href="#">Contact Us</a>
+					<a class="nav-link" href="#">Contact Us</a>
 				</li>
 			</ul>
 		</div>
@@ -76,7 +93,7 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="./images/header1.jpg" class="d-block w-100" alt="">
-					<div class="carousel-caption d-none d-md-block text-dark">
+					<div class="carousel-caption d-none d-md-block">
 						<h5>We Interpret Numbers</h5>
 						<p>Give your numbers and we will create beautiful graphs</p>
 						<a href="#">
